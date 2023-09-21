@@ -4,6 +4,103 @@
 \alias{blueprint-actors}
 \title{Actors}
 \description{
-\if{html}{\out{<div class="sourceCode {r, child = "man/blueprint/blueprint-actors.Rmd"}">}}\preformatted{}\if{html}{\out{</div>}}
+There are two main actors in the \code{teal} development:
+\itemize{
+\item \code{teal} App Developer
+\item \code{teal} Module Developer
+}
+\subsection{\code{teal} App Developer}{
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{\{r actors_mermaid1, echo=FALSE\}
+DiagrammeR::mermaid("
+graph LR
+    A[Teal App Developer]--utilizes--> B[teal modules]
+    B--to create--> C[teal app]
+    D[app user]--uses--> C
+style A fill:lightblue
+style C fill:gold
+style D fill:pink
+")
+}\if{html}{\out{</div>}}
+
+The primary responsibility of a \code{teal} app developer is to leverage the available building blocks of the \code{teal} framework to create a functional \code{teal} app that analyses the data.
+
+To expedite the app creation process, developers can take advantage of pre-existing \code{teal} modules found in R packages like \code{teal.modules.general} and \code{teal.modules.clinical}.
+
+These modules are designed with a focus on standardization and versatility, making them suitable for a wide range of use cases.
+
+When developing a \code{teal} app, the developer will select the most appropriate \code{teal} modules and integrate them into the app's interface to ensure seamless usability for end-users.
+
+To learn more about the existing modules, visit \href{https://insightsengineering.github.io/teal.gallery/}{\code{teal.gallery}} that contains several demo applications and their source code.
+}
+
+\subsection{\code{teal} Module Developer}{
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{\{r actors_mermaid2, echo=FALSE\}
+DiagrammeR::mermaid("
+graph LR
+    A[Teal App Developer]--utilizes--> B[teal modules]
+    E[Teal Module Developer]--develops--> B
+    B--to create--> C[teal app]
+    D[app user]--uses--> C
+style A fill:lightblue
+style E fill:lightgreen
+style D fill:pink
+style C fill:gold
+")
+}\if{html}{\out{</div>}}
+
+The main duty of a \code{teal} module developer is to construct a compatible \code{teal} module that can be utilized within the \code{teal} framework.
+
+Several factors influence the scope and requirements for building a \code{teal} module.
+
+When creating a reusable \code{teal} module, it's advisable to focus on making it as general and adaptable as feasible to maximize the possibilities of being re-used in the future.
+However, developers have the freedom to create a \code{teal} module that is customized to suit the specific demands of a project.
+
+Ultimately, one or more \code{teal} modules are employed to construct the \code{teal} app.
+
+To learn more about creating custom modules follow the \href{https://insightsengineering.github.io/teal/latest-tag/articles/creating-custom-modules.html}{Tutorial on Creating a Custom Module}.
+}
+
+\subsection{Workflow in a Clinical Trial Study}{
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{\{r actors_mermaid3, echo=FALSE\}
+DiagrammeR::mermaid("
+\%\%| fig-width: 7.5
+graph LR
+    subgraph Study B
+        A2[Study Teal App Developer]--utilizes--> B2[teal modules]
+        E2[Study Teal Module Developer]-.develops.-> B2
+        B2--to create--> C2[study teal app]
+        D2[study app user]--uses--> C2
+    end
+    E3[Teal Module Developer]--develops--> B
+    E3--develops-->B2
+    subgraph Study A
+        A[Study Teal App Developer]--utilizes--> B[teal modules]
+        E[Study Teal Module Developer]-.develops.-> B
+        B--to create--> C[study teal app]
+        D[study app user]--uses--> C
+    end
+style A fill:lightblue
+style A2 fill:lightblue
+style E fill:limegreen
+style E2 fill:limegreen
+style E3 fill:lightgreen
+style D fill:pink
+style D2 fill:pink
+style C fill:gold
+style C2 fill:gold
+")
+}\if{html}{\out{</div>}}
+
+In a clinical trial study setting, a unique \strong{study \code{teal} app developer} is assigned to each study team and is accountable for developing a tailored \code{teal} app for their respective study.
+
+The \strong{study \code{teal} app developer} will initially leverage existing \code{teal} modules from R packages created by \strong{\code{teal} module developers}.
+
+In cases where there is a need to create new modules tailored to the study, a \strong{study \code{teal} module developer} will need to be involved.
+
+Upon completion, each study team will have their own designated \code{teal} app tailored to their specific study.
+}
 }
 \keyword{internal}
