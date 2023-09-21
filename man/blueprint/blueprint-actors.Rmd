@@ -1,5 +1,3 @@
-```{r, child = "setup.Rmd", include = FALSE}
-```
 
 There are two main actors in the `teal` development:
 
@@ -9,7 +7,7 @@ There are two main actors in the `teal` development:
 ## `teal` App Developer
 
 ```
-{r actors_mermaid1, echo=FALSE}
+# {r actors_mermaid1, echo=FALSE}
 DiagrammeR::mermaid("
 graph LR
     A[Teal App Developer]--utilizes--> B[teal modules]
@@ -34,7 +32,7 @@ To learn more about the existing modules, visit [`teal.gallery`](https://insight
 ## `teal` Module Developer
 
 ```
-{r actors_mermaid2, echo=FALSE}
+# {r actors_mermaid2, echo=FALSE}
 DiagrammeR::mermaid("
 graph LR
     A[Teal App Developer]--utilizes--> B[teal modules]
@@ -62,7 +60,7 @@ To learn more about creating custom modules follow the [Tutorial on Creating a C
 ## Workflow in a Clinical Trial Study
 
 ```
-{r actors_mermaid3, echo=FALSE}
+# {r actors_mermaid3, echo=FALSE}
 DiagrammeR::mermaid("
 %%| fig-width: 7.5
 graph LR

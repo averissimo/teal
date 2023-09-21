@@ -1,8 +1,6 @@
-```{r, child = "setup.Rmd", include = FALSE}
-```
 
 ```
-{r products_map_mermaid1, echo=FALSE}
+# {r products_map_mermaid1, echo=FALSE}
 DiagrammeR::mermaid("
 %%| fig-height: 6
 flowchart RL

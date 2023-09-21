@@ -1,3 +1,4 @@
+
 Welcome to `teal` Technical Blueprint documentation!
 
 The purpose of this material is to aid new developer's comprehension of the fundamental principles of the `teal` framework.

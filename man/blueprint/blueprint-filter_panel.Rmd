@@ -1,5 +1,3 @@
-```{r, child = "setup.Rmd", include = FALSE}
-```
 
 ## Introduction
 

@@ -1,8 +1,6 @@
-```{r, child = "setup.Rmd", include = FALSE}
-```
 
 ```
-{r dataflow_mermaid1, echo=FALSE}
+# {r dataflow_mermaid1, echo=FALSE}
 DiagrammeR::mermaid("
 %%| fig-width: 7.5
 graph
